@@ -1,0 +1,74 @@
+/*---------------------------------------------------------------------------LOGIN--------------------------------------------------------------------------------------------*/
+/*/*----login, registro y registro valido------*/*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #F5BAC3;
+  }
+  
+  .form-register {
+    width: 400px;
+    background: #F9F2D7;
+    padding: 30px;
+    margin:auto;
+    margin-top: 2%;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #00000050;
+    margin-inline-end: auto;
+  }
+  
+  .form-register h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  
+  .controls {
+    width: 95%;
+    background: #ffffff75;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #72747670;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .form-register p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+  }
+  
+  .form-register a {
+    color: rgb(54, 30, 133);
+    text-decoration: none;
+  }
+  
+  .form-register a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+  
+  .form-register .botons {
+    width: 100%;
+    background: #0e2d71d5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+
+
+

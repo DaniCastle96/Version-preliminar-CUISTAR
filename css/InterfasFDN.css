@@ -1,0 +1,184 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F5BAC3;
+
+}
+/*<----------------Header-------->*/
+.container-flex1{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;    
+}
+.caja1{
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    padding: 2px;
+}
+.caja1 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.caja1 h2{
+    margin-left: 5px;
+    font-size: 30px;
+}
+.caja2{
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    flex-grow: 5;
+    margin: auto;
+}
+.caja2 a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.caja2 a:hover{
+    color: #ee9ca7;
+}
+.caja2 nav{
+    display: flex;
+    justify-content: last baseline;
+    margin-right: 10px;
+}
+/*<----------------Fin--Header-------->*/
+/*<----------------Divisoon--Modulo-------->*/
+.container-flex-2-1{ 
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;  
+}
+.container-flex-2-1 h2{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+.container-flex-2-1 p{
+    font-size: 20px;
+}
+.container-flex-2-1 button{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100%;
+}
+.container-flex-2-1 a{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100%;
+}
+.container-flex-2-1 button:hover{
+    cursor: pointer;
+}
+.imagenPQRS{
+    display: flex;
+    flex-flow: row wrap;
+    order: 1;
+    flex-grow: 1;
+    width: 20%;
+}
+.imagenPQRS img{
+    border: #050505 solid 2px;
+    height: 250PX;
+    margin: auto;
+    width: 100%;
+}
+.container-flex-2-1 .PQRS{
+    display: flex;
+    flex-flow: row wrap;
+    order: 2;
+    flex-grow: 6;
+    margin: 30px;
+    width: 70%;
+}
+/*<----------------Divisoon--Modulo-------->*/
+.container-flex-2-2{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10px;
+}
+.container-flex-2-2 h2{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+}
+.imagen-R-mascotas{
+    display: flex;
+    flex-flow: row wrap;
+    order: 1;
+    flex-grow: 1;
+    width: 20%;
+}
+.imagen-R-mascotas img{
+    border: #050505 solid 2px;
+    height: 250PX;
+    margin: auto;
+    width: 100%;
+}
+.R-mascotas{
+    display: flex;
+    flex-flow: row wrap;
+    text-align: start;
+    order: 2;
+    flex-grow: 6;
+    width: 70%;
+    margin: 30px;
+}
+.container-flex-2-2 p{
+    font-size: 20px;
+}
+.container-flex-2-2 button{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100%;
+}
+.container-flex-2-2 a{
+    background: #373B44;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    font-size: 20px;
+    height: 40px;
+    width: 100%;
+}
+.container-flex-2-2 button:hover{
+    cursor: pointer;
+}
+
+/*<--------------Fin--Divisoon--Modulo-------->*/
+/*<----------------Pie--de--Pagina-------->*/
+.container-flex3{
+    background-color: #F9F2D7;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
+    margin: auto;
+ }
+ /*<----------------Fin--de--Pagina-------->*/

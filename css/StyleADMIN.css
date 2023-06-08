@@ -1,0 +1,107 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F5BAC3;
+}
+/*<----------------Header-------->*/
+.container-flex1{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;
+    
+}
+.caja1{
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    padding: 2px;  
+}
+.caja1 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.caja1 h2{
+    margin-left: 5px;
+    font-size: 30px;
+}
+/*<----------------Fin--Header-------->*/
+.container-flex{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #FDE9CD;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 5px;
+}
+.T-M{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 30px;
+    margin-top: 50px;
+}
+.cajas{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 5PX;
+    height: auto;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.C{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 10PX;
+    height: 500PX;
+    width: 30%;
+    
+}
+@media(max-width:500px){
+    .C{
+        display: block;
+        height: 500px;
+        width: 350px
+    }
+}
+h3{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+button{
+    background-color: #0e2d71d5;
+    font-size: 1.3em;
+    color: white;
+    height: 40px;
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+}
+.C img{
+    height: 300px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 40px;
+}
+/*<----------------Pie--de--Pagina-------->*/
+.container-flex3{
+    background-color:#F9F2D7;
+    display: block;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    height: 110px;
+   
+ }
+ .T-F{
+    font-size: 20px;
+ }
+ /*<----------------Fin--de--Pagina-------->*/

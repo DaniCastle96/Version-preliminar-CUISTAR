@@ -1,0 +1,45 @@
+
+<?php
+include ("../conexion.php");
+
+    ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/StyleFORMPROV.css">
+  
+  <title>Agregar Producto</title>
+</head>
+<body>
+  
+  <section class="form-admin">
+    <h4>Agregar <Proveedor</h4>
+    <p>Rellena todos los campos</p>
+    <div class="container">
+
+    <form action="./InterfazPROVEDORES.html" method="POST">
+   
+    <input class="controls" type="text"  placeholder="NOMBRE COMPLETO" name="nombre" required>
+    <input class="controls" type="text"  placeholder="DIRECCION" name="direccion" required>
+    <input class="controls" type="number"  placeholder="TELEFONO FIJO" name="fijo" required>
+    <input class="controls" type="number"  placeholder="CELULAR" name="celular" required>
+    <input class="controls" type="text"  placeholder="CIUDAD" name="ciudad" required>
+    <input class="controls" type="text"  placeholder="PRODUCTO" name="producto" required>
+    <input class="controls" type="email"  placeholder="CORREO ELECTRONICO" name="correo" required>
+    <input class="controls" type="date"  placeholder="FECHA DE INSCRIPCION" name="fecha" required>
+
+    
+    <input class="botons"  type="submit" value="Añadir">
+   </form>
+  
+   </div>
+
+  <a href="../html/InterfazPROVEDORES.html"> <input class="botons"  type="reset" value="Cancelar"></a>
+  
+  </section>
+
+</body>
+</html>

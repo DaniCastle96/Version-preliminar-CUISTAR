@@ -1,0 +1,101 @@
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E8D4D1;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+}
+/*HEDER*/
+.contenedor{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;  
+}
+
+.contenedor1{
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    padding: 2px;
+}
+.contenedor1 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 15%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.contenedor1 h2{
+    margin-left: 10%;
+    font-size: 30px;
+    
+}
+.contenedor2{
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    flex-grow: 5;
+    margin: auto;
+    margin-right: 3%;
+}
+.contenedor2 a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.contenedor2 nav{
+    display: flex;
+    justify-content: last baseline;
+    margin-right: 10px;
+}
+/*TABLA LISTA DE PROVEEDORES*/
+
+.listapro{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 5%;
+}
+
+table {
+    border: black 1px solid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: auto;
+    background-color:#FFFFFF80;
+    
+    
+  }
+  td, th {
+    border: black 1px solid;
+    width: auto;
+    padding: auto;
+    border-collapse: collapse;
+    
+  }
+
+  .container{
+    padding: 0.5%;
+    padding: auto;
+    border-collapse: collapse;
+  }
+
+  .botons{
+    background: #0e2d71;
+    color: white;
+    font-size: 100%;
+    cursor: pointer;
+  }

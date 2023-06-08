@@ -1,0 +1,158 @@
+.container-menu{
+    position: relative;
+    background: #F5BAC3;
+    width: 15%;
+    height: 15%;
+    transition: all 500ms ease;
+    float: left;
+    top: -288px;
+    height: 100%;
+}
+.cont-menu nav{
+    width: 100%;
+    max-width: 250px;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+}
+
+.cont-menu nav a {
+    
+    display: block;
+    text-decoration:  none;
+    padding: 30px;
+    color: #000000;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+.cont-menu nav a:hover{
+    border-left:5px solid #F9F2D7;
+    background: #ff005143;
+}
+.edicion {
+    background: #ffe2e2;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 285px;
+    padding: auto;
+    width: 85%;
+}
+.caja1{
+    background: rgb(252, 141, 141);
+    position: absolute;
+    display: flex;
+    left: 285px;
+    padding: auto;
+    width: 85%;
+    justify-content: center;
+}
+.cajas{ 
+    position: relative;
+    display: flex;
+    left: 285px;
+    padding: auto;
+    margin-top: 70px;
+}
+
+.caja2  {
+    background: #ffe2e2;
+    border-radius: 0.5em;
+    padding: 20px 30px;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.caja3{
+    background: #ffe2e2;
+    border-radius: 0.5em;
+    padding: 20px 15px;
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+.caja4{
+    background: #ffe2e2;
+    border-radius: 0.5em;
+    padding: 20px 30px;
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+}
+.caja5{
+    background: #ffe2e2;
+    border-radius: 0.5em;
+    padding: 20px 30px;
+    margin-top: 5px;
+    justify-content: center;
+    display: flex;
+    
+}
+
+/*-------------------------------------------------------------Pie de Pagina Sexta parte-------------------------------------------------------------------------------*/
+/*Pie de pagina*/
+.pie-pagina{
+    width: 100%;
+    background-color: #F9F2D7;
+    overflow: hidden;
+}
+.pie-pagina .grupo-1{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid; /*-*/
+    grid-template-columns: repeat(3, 1fr); /*dividir en 3 columnas*/
+    grid-gap: 50px; /*Distancia de las columnas*/
+    padding: 45px 0px;
+}
+.pie-pagina .grupo-1 .box figure{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pie-pagina .grupo-1 .box figure img{
+    width: 200px;
+}
+.pie-pagina .grupo-1 .box h2{
+    color: #FA7592;
+    margin-bottom: 25;
+    font-size: 20px;
+}
+.pie-pagina .grupo-1 .box p{
+    color: black;
+    margin-bottom: 10px; /*Separacion de parrafo a parrafo*/
+}
+.pie-pagina .grupo-1 .red-social a{
+    display: inline-block;
+    text-decoration: none;
+    width: 45px;
+    height: 45px;
+    line-height: 45px;
+    color: black;
+    margin-right: 10px;
+    background-color:#E3D6B8;
+    text-align: center;
+    transition: all 300ms aese;
+}
+.pie-pagina .grupo-1 .red-social a:hover{
+    color: #FA7592;
+}
+.pie-pagina .grupo-2{
+    background-color: #FA7592;
+    padding: 8px;
+    text-align: center;
+    color: black;
+    font-size: 17px;
+}
+@media screen and (max-width: 1140px){
+    .pie-pagina .grupo-1{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr); /*dividir en 3 columnas*/
+        grid-gap: 30px; /*Distancia de las columnas*/
+        padding: 35px 0px; 
+    }
+}

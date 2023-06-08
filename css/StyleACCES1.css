@@ -1,0 +1,79 @@
+/*------------------------------------------------------------- Catalogo-------------------------------------------------------------------------------*/
+/*Interfaces*/
+.container-icon{
+    position: relative;
+    left: 1000%;/*posicion de iconotienda*/
+    top: -7%; 
+}
+
+
+/* Main */
+.container-items{
+    display: grid;/*hace que se ve de largo si se quita esto queda vertical*/
+    grid-template-columns: repeat(4, 1fr);/*cantidad de cajas en el background*/
+    gap: 90px;/*espacio entre los cuadros*/
+   margin-top: 70px;
+    text-align: center;
+   margin-left: 30px;
+   margin-right: 30px;
+}
+
+.item{
+    border-radius: 10px;/*caja parte de abajo*/
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    background-color:  #F9F2D7;
+    
+}
+
+.item:hover{
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    background-color: #ec8fae30; 
+  
+    
+}
+
+.item img{
+    width: 100%;
+    height: 300px;
+    border-radius: 10px 10px 0 0;/*borde de cajas*/
+    object-fit: cover;
+    transition: all .5s;
+    
+    
+}
+
+.item figure{
+    overflow: hidden;
+    
+}
+
+.item:hover img{
+    transform: scale(1.2);/*zoom imagenes*/
+    
+}
+
+
+.info-product{
+padding: 15px 30px;
+line-height: 1;
+display: flex;
+flex-direction: column;
+gap: 10px;
+}
+
+.price{
+font-size: 28px;
+font-weight: 500;
+margin-top: 10px;
+}
+h2{font-size: 30px;}
+h1{font-size: 20px;}
+
+.info-product button{
+border: none;
+background: none;
+background-color: #0e2d71d5;
+color: #fff;
+padding: 15px 10px;
+cursor: pointer;
+}

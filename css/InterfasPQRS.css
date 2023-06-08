@@ -1,0 +1,141 @@
+body{
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+ background-color: #F5BAC3;
+
+}
+/*<----------------Header-------->*/
+.container-flex1{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;    
+}
+.caja1{
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    padding: 2px;
+}
+.caja1 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.caja1 h2{
+    margin-left: 5px;
+    font-size: 30px;
+}
+.caja2{
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    flex-grow: 5;
+    margin: auto;
+}
+.caja2 a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.caja2 a:hover{
+    color: #ee9ca7;
+}
+.caja2 nav{
+    display: flex;
+    justify-content: last baseline;
+    margin-right: 10px;
+}
+/*<----------------Fin--Header-------->*/
+/*<----------------Formulario--PQRS-------->*/
+.container-flex2{
+    background-color: #F9F2D7;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin-left: 10%;
+    padding: 10PX;
+}
+.formularioPQRS{
+    width: 80%;
+    order: 1;
+    flex-grow: 8;
+}
+.formularioPQRS h2{
+    font-size: 50px;
+    margin-left: 10px;
+}
+.formularioPQRS select{
+    height: 40px;
+    border-radius: 5px;
+}
+.formularioPQRS form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 90%;
+} 
+.formularioPQRS label{
+    font-weight: bold;
+    margin-top: 10px; 
+}
+.formularioPQRS input, textarea{
+    box-sizing: border-box;
+    margin-top: 10px;
+    height: 35px;
+    
+}
+.formularioPQRS textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100PX;
+    max-height: 300px;
+}
+.formularioPQRS button{
+    margin-top: 20px;
+    height: 40px;
+  background-color: #0e2d71d5;
+    color: white;
+    border-color: rgb(48, 48, 48);
+}
+.formularioPQRS button:hover{
+    cursor: pointer;
+}
+.imagenformulario{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    order: 2;
+    flex-grow: 2;
+    width: 20%;
+}
+.imagenformulario img{
+    justify-content: center;
+    border: #050505 solid 2px;
+    height: 680PX;
+    margin: auto; 
+    width: 100%;
+}
+@media(max-width:500px){
+    .imagenformulario{
+        width: 300px;
+    }
+
+}
+/*<--------------Fin--Formulario--PQRS-------->*/
+/*<----------------Pie--de--Pagina-------->*/
+.container-flex3{
+   background-color: #F9F2D7;
+   display: block;
+   justify-content: center;
+   text-align: center;
+   padding: 20px;
+   margin: auto;
+}
+/*<----------------Fin--de--Pagina-------->*/
