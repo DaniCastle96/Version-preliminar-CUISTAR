@@ -15,6 +15,7 @@ body{
     order: 1;
     flex-grow: 1;
     padding: 2px;  
+    
 }
 .caja1 img{
     width: 80px;
@@ -32,9 +33,10 @@ body{
     display: flex;
     flex-flow: row wrap;
     background-color: #FDE9CD;
-    width: 80%;
-    margin-left: 10%;
+    width: 98%;
+    margin-left: 1%;
     border-radius: 5px;
+
 }
 .T-M{
     display: flex;
@@ -44,21 +46,22 @@ body{
     margin-top: 50px;
 }
 .cajas{
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     justify-content: center;
     margin: 5PX;
     height: auto;
     width: 100%;
     margin-bottom: 5%;
+    grid-template-columns:repeat(4,1fr);
+    gap: 20px;
+    
 }
 .C{
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    margin: 10PX;
     height: 500PX;
-    width: 30%;
+    width: 100%;
     
 }
 @media(max-width:500px){

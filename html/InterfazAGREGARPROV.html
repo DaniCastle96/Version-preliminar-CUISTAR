@@ -1,8 +1,4 @@
 
-<?php
-include ("../conexion.php");
-
-    ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +12,15 @@ include ("../conexion.php");
 <body>
   
   <section class="form-admin">
-    <h4>Agregar <Proveedor</h4>
-    <p>Rellena todos los campos</p>
+    <div style="display: flex; align-items: center; margin-left: 50px; margin-top: 10px; margin-bottom: 20px;">
+      <img src="../img/iconomascotas.png" alt="logo" width="60" style="vertical-align: middle; margin-right: 10px;"/>
+      <h4 class="titulorespuesta" style="margin: 0;">Agregar Proveedor</h4>
+    </div><br>
+    
     <div class="container">
 
-    <form action="./InterfazPROVEDORES.html" method="POST">
-   
+    <form action="../php/agregarproveedor.php" method="POST">
+      
     <input class="controls" type="text"  placeholder="NOMBRE COMPLETO" name="nombre" required>
     <input class="controls" type="text"  placeholder="DIRECCION" name="direccion" required>
     <input class="controls" type="number"  placeholder="TELEFONO FIJO" name="fijo" required>
@@ -30,14 +29,10 @@ include ("../conexion.php");
     <input class="controls" type="text"  placeholder="PRODUCTO" name="producto" required>
     <input class="controls" type="email"  placeholder="CORREO ELECTRONICO" name="correo" required>
     <input class="controls" type="date"  placeholder="FECHA DE INSCRIPCION" name="fecha" required>
+   <input class="botons"  type="submit" value="Añadir">
+   </form></div>
 
-    
-    <input class="botons"  type="submit" value="Añadir">
-   </form>
-  
-   </div>
-
-  <a href="../html/InterfazPROVEDORES.html"> <input class="botons"  type="reset" value="Cancelar"></a>
+  <a href="../html/InterfazPROVEDORES.php"> <input class="botons"  type="reset" value="Cancelar"></a>
   
   </section>
 

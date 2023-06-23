@@ -31,19 +31,21 @@ body{
 /*Agregar Producto*/
 
 .form-admin {
-    width: 500px;
-    background: #F9F2D7;
-    padding: 30px;
-    margin: auto;
-    margin-top: 10px;
-    border-radius: 10px;
-    font-family: 'calibri';
-    color: rgb(0, 0, 0);
-    box-shadow: 7px 13px 37px #00000050;
-    height: 970px;
-    position: relative;
-    justify-content: center;
-  }
+  width: 500px;
+  background: #F9F2D7;
+  padding: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: rgb(0, 0, 0);
+  box-shadow: 7px 13px 37px #00000050;
+  height: auto;
+  position: relative;
+  justify-content: center;
+}
+
 
   .form-admin h4 {
     font-size: 22px;
@@ -83,7 +85,7 @@ body{
   
   .form-admin .botons {
     width: 100%;
-    background: #0e2d71;
+    background: #0e2d71d5;
     border: none;
     padding: 12px;
     color: white;

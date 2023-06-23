@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+body{
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E8D4D1;
+    background-image: url(img/atoblanco.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+}
+.capa{/*capa de opacidad de background*/
+    position: fixed;/*capa fija en toda la panatala del background*/
+    width: 100%;/*ancho de barra lateral*/
+    height: 100vh;/*largo de la barra lateral*/
+    background: rgba(122, 124, 112, 0);
+    z-index: -1;/*posicion de capa encima o debajo*/
+    top: 0;/*subir o bajar */
+    left: 0;/*izquierda*/
+}
+/*Agregar Producto*/
+
+.form-admin {
+  width: 500px;
+  background: #F9F2D7;
+  padding: 30px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px; 
+  border-radius: 10px;
+  font-family: 'calibri';
+  color: rgb(0, 0, 0);
+  box-shadow: 7px 13px 37px #00000050;
+  height: auto;
+  position: relative;
+  justify-content: center;
+}
+
+
+  .form-admin h4 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+
+  }
+  
+  .controls {
+    width: 100%;
+    background: #ffffff75;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #72747670;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+  .form-admin p {
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+    margin: 1%;
+  }
+  
+  .form-admin a {
+    color: rgb(54, 30, 133);
+    text-decoration: none;
+  }
+  
+  .form-admin a:hover {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+  }
+  
+  .form-admin .botons {
+    width: 100%;
+    background: #0e2d71d5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+    
+  }
+
+  /*producto agregado con exito valido*/
+
+  .form-agre {
+    width: 500px;
+    background: #F9F2D7;
+    padding: 30px;
+    margin: auto;
+    margin-top: 300px;
+    border-radius: 10px;
+    font-family: 'calibri';
+    color: rgb(0, 0, 0);
+    box-shadow: 7px 13px 37px #00000050;
+    position: relative;
+    justify-content: center;
+  }
+
+  .form-agre h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .controls {
+    width: 100%;
+    background: #ffffff75;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #72747670;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+  }
+  
+
+  
+  .form-agre .botons {
+    width: 100%;
+    background: #0e2d71;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    cursor: pointer;
+  }
+/* Opciones de seleccion*/
+
+ select{
+  width: 100%;
+  background: #ffffff75;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  border: 1px solid #72747670;
+  font-family: 'calibri';
+  font-size: 18px;
+  color: rgb(0, 0, 0);
+ }
+
+

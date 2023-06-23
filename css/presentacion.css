@@ -1,0 +1,333 @@
+body {
+    background-color: #F5BAC3;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    }
+    /*==========================Header lateral=========================================*/
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+    .sidebar {
+      width: 170px;
+      background-color: #F9F2D7;
+      color: black;
+      padding: 20px; 
+    }
+    .sidebar img {
+      width: 100px;
+      margin-bottom: 10px; 
+      margin-left: 30px;
+    }
+    .sidebar h3 {
+      margin: 0;
+      font-size: 30px;
+      text-align: center;
+    }
+    .sidebar ul {
+      list-style: none;
+      margin: 20px 0;
+      padding: 0;
+    }
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+    .sidebar a {
+      color: black;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .sidebar ul li a {
+        display: inline-block;
+        width: 150px; 
+        padding: 10px;
+        border-radius: 5px;
+        color: #333;
+        transition: all 0.3s ease;
+      }
+      
+      .sidebar ul li a:hover {
+        color: #000000;
+        background-color: #F5BAC3;
+        border-color: #F5BAC3;
+        text-decoration: none;
+      } 
+    /*==============================Fin Header lateral=====================================*/
+    /*==============================plateamiento=====================================*/
+    .content{
+      width: 100%;
+    }
+    .content1{
+      background-color: #FDE9CD;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 9%;
+      height: 700px;
+      display: flex;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .textpdp{
+      order: 1;
+      width: 75%;
+      height: auto;
+      padding: 5px;
+    }
+    .imgpdp{
+      order: 2;
+      width: 25%;
+      height: auto;
+      padding: 5px;
+    }
+    .content1 img{
+      width: 100%;
+      height: 685px;
+      border-radius: 5px;
+      
+    }
+    .content1 h2{
+      font-size: 50px;
+    }
+    .content1 p{
+      font-size: 30px;
+    }
+    .content1:hover {
+      box-shadow: 0 0 20px rgb(0, 0, 0);
+    }
+    /*===================justificacion=============================*/
+    .content2{
+      background-color: #FDE9CD;
+      width: 80%;
+      margin-left: 10%;
+      margin-top: 6%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .textj h1{
+     font-size: 50px;
+    }
+    .textj p{
+      font-size: 30px;
+    }
+    .imgj img{
+      width: 100%;
+      height: 700px;
+      
+      border-radius: 5px;
+    }
+    .imgj{
+      order: 1;
+      width: 30%;
+      height: 500px;
+      height: auto;
+      padding: 5px;
+    }
+    .textj{
+      padding: 5px;
+      order: 2;
+      width: 70%;
+      text-align: center;
+    }
+    .content2:hover {
+      box-shadow: 0 0 20px black;
+    }
+    /*===================objetivo general=============================*/
+    .content3{
+      background-color: #FDE9CD;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 13%;
+      height: auto;
+      display: flex;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .textog{
+      order: 1;
+      width: 75%;
+      height: auto;
+      padding: 5px;
+      text-align: center;
+      margin-top: 70px;
+    }
+    .imgog{
+      order: 2;
+      width: 25%;
+      height: auto;
+      padding: 5px;
+    }
+    .imgog img{
+      width: 100%;
+      height: 500px;
+      border-radius: 5px;
+    }
+    .textog h1{
+      font-size: 50px;
+    }
+    .textog p{
+      font-size: 30px;
+    }
+    .content3:hover {
+      box-shadow: 0 0 20px rgb(0, 0, 0);
+    }
+    /*===================objetivos especificos=============================*/
+    .content4{
+      background-color: #FDE9CD;
+      width: 90%;
+      margin-left: 5%;
+      margin-top: 6%;
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .textoeo h1{
+     font-size: 50px;
+    }
+    .textoeo p{
+      font-size: 30px;
+      text-align: start;
+    }
+    .imgoeo img{
+      width: 100%;
+      height: 700px;
+      border-radius: 5px;
+    }
+    .imgoeo{
+      order: 1;
+      width: 25%;
+      height: auto;
+      padding: 5px;
+    }
+    .textoeo{
+      order: 2;
+      width: 75%;
+      text-align: center;
+      padding: 5px;
+    }
+    .content4:hover {
+      box-shadow: 0 0 20px black;
+    }
+    /*===================funcionalidad de la aplicacion=============================*/
+    .content5{
+      background-color: #FDE9CD;
+      max-width: 90%;
+      margin-left: 5%;
+      margin-top: 6%;
+      max-height: 750px;
+      overflow: auto;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .imgFDA{
+      display: flex;
+      text-align: center;
+      width: 100%;
+    }
+    .textFDA {
+      padding: 5px;
+      width: 100%;
+    }
+    .imgFDA img{
+      height: 50px;
+      width: 50px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    .imgFDA h1{
+      width: 100%;
+      font-size: 50px;
+    }
+    .textFDA h1{
+      font-size: 40px;
+      text-align: center;
+    }
+    .textFDA p{
+      font-size: 30px;
+      text-align: start;
+    }
+    .content5:hover {
+      box-shadow: 0 0 20px black;
+    }
+    /*===================integrantes=============================*/
+    .content6{
+      background-color: #FDE9CD;
+      max-width: 90%;
+      margin-left: 5%;
+      margin-top: 6%;
+      max-height: 750px;
+      border-radius: 5px;
+      transition: box-shadow 0.3s ease;
+    }
+    .textis {
+      padding: 5px;
+      width: 100%;
+    }
+    .textis h1{
+      font-size: 60px;
+      text-align: center;
+    }
+    .textis h2{
+      font-size: 40px;
+      text-align: center;
+    }
+    .textis img{
+      height: 50px;
+      width: 50px;
+      text-align: center;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .textis h3{
+      font-size: 40px;
+      text-align: center;
+    }
+    .content6:hover {
+      box-shadow: 0 0 20px black;
+    }
+    /*===================Procedimientos almacenados=============================*/
+    .content7{
+      background-color: #FDE9CD;
+      max-width: 90%;
+      margin-left: 5%;
+      margin-top: 6%;
+      max-height: 750px;
+      border-radius: 5px;
+      overflow: scroll;
+      transition: box-shadow 0.3s ease;
+    }
+    .textpa {
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+    }
+    .textpa h1{
+      font-size: 50px;
+    }
+    .textpa img{
+      height: 80px;
+      width: 80px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    .textpa1{
+      text-align: center;
+    }
+    .textpa1 h3{
+      font-size: 25px;
+    }
+    .content7:hover {
+      box-shadow: 0 0 20px black;
+    }
+    /*========================Fin==Presentacion=====================================*/

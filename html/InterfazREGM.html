@@ -12,35 +12,58 @@
 <body>
   
   <section class="form-admin">
-    <h4>NOS COMPLACE CUIDAR DE TU MASCOTA</h4>
-    <h4>¡CUISTAR! Te ofrece productos de alta calidad</h4>
-    <h4>★Registra tu mascota y recibe los grandes descuentos que tenemos para ti★</h4>
 
-    <input class="controls" type="text" required name="nombres" id="ID" placeholder="ID Mascota">
-    <input class="controls" type="text" required name="nombres" id="ID" placeholder="Nombre Mascota">
+    <div style="text-align: center;">
+      <div style="text-align: center;">
+        <img src="../img/iconomascotas.png" alt="logo" width="90" style="vertical-align: middle; margin-right: 10px; margin-bottom: 10px;"/>
+        <h4>NOS COMPLACE CUIDAR DE TU MASCOTA</h4>
+        <h4>¡CUISTAR! Te ofrece productos de alta calidad</h4>
+        <h4>★ Registra tu mascota y recibe los grandes descuentos que tenemos para ti ★</h4>
+      </div>
+      
+    
+
+    <form action="../php/resgistrarmascota.php" method="POST">
+    <input class="controls" type="text" required name="nombre" placeholder="Nombre Mascota">
     <form>
       
-      <select>
-        <option disabled selected="" aria-required="true">Categoria</option>
-        <option value="">Perro</option>
-        <option value="">Gato</option>
+      <select name="categoria" aria-required="true">
+        <option disabled selected>Categoria</option>
+        <option value="Perro">Perro</option>
+        <option value="Gato">Gato</option>
       </select>
-    </form>
-   <input class="controls" type="text" required name="nombres" id="ID" placeholder="Raza">
-  </form>
-    
-  <select>
-    <option disabled selected="" >Genero</option>
-    <option value="">MACHO</option>
-    <option value="">HEMBRA</option>
+      <select name="genero" aria-required="true">
+        <option disabled selected>Genero</option>
+        <option value="MACHO">Macho</option>
+        <option value="HEMBRA">Hembra</option>
+      </select>
+   <input class="controls" type="text" required name="raza" placeholder="Raza">
+ 
+   <select name="edad" required>
+    <option disabled selected>Edad</option>
+    <option value="1">Menos de 1 año</option>
+    <option value="2">1 - 2 años</option>
+    <option value="3">3 - 5 años</option>
+    <option value="4">Más de 5 años</option>
   </select>
-</form> 
-<input class="controls" type="text" required name="nombres" id="ID" placeholder="Edad" required="">
-<input class="controls" type="text" required name="nombres" id="ID" placeholder="Peso" required="">
-<input class="controls" type="text" required name="nombres" id="ID" placeholder="Estatura" required="">
-<input class="controls" type="email" required name="nombres" id="ID" placeholder="Correo" required="">
+  <select name="peso" required>
+    <option disabled selected>Peso</option>
+    <option value="0-5">Menos de 5 kg</option>
+    <option value="5-10">5 - 10 kg</option>
+    <option value="10-20">10 - 20 kg</option>
+    <option value="20+">Más de 20 kg</option>
+  </select>
+  <select name="estatura" required>
+    <option disabled selected>Estatura</option>
+    <option value="menor-a-30">Menor a 30 cm</option>
+    <option value="30-60">30 - 60 cm</option>
+    <option value="60-90">60 - 90 cm</option>
+    <option value="mayor-a-90">Mayor a 90 cm</option>
+  </select>
+<input class="controls" type="email" required name="correo" placeholder="Correo" required="">
     
-    <a href="../html/InterfasFDN.html"> <input class="botons"  type="submit" value="Registrar"></a>
+<input class="botons"  type="submit" value="Registrar">
+  </form>
     <a href="../html/InterfasFDN.html"> <input class="botons"  type="reset" value="Volver"></a>
    
 

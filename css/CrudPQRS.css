@@ -8,6 +8,7 @@ body{
     display: flex;
     flex-flow: row wrap;
     background-color: #F9F2D7;
+    border-radius: 5px;
   
 }
 .caja1{
@@ -106,18 +107,6 @@ body{
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-.tabla tbody tr:hover{
-    background: #FFEFBA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.tabla tbody td:hover{
-    background: #ee9ca7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
 .tabla img{
     width: 20px;
     height: 20px;
@@ -177,42 +166,44 @@ body{
 .container-flex-R{
     background-color: #FDE9CD;
     height: auto;
-    width: 90%;
-    margin-left: 5%;
+    width: 50%;
+    margin-left: 25%;
     padding: 5PX;
+    border-radius: 5px;
  
 }
-.responder{
+.container-flex-R form{
     display: flex;
-    justify-content: center;
     flex-direction: column;
+}
+.container-flex-R input{
+    box-sizing: border-box;
+    margin-left: 10%;
+    height: 35px;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.container-flex-R select{
+    margin-left: 10%;
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+.container-flex-R label{
+    margin-left: 10%;
+    font-weight: bolder;
 
+}
+.container-flex-R .titulorespuesta{
+    padding: 5px;
+    margin-left: 10%;
 }
 @media(max-width:500px){
     .caja2-3{
         display: flex;
         justify-content: center;
     }
-}
-.titulorespuesta{
-    display: flex;
-    margin-left: 10%;
-}
-.Email{
-    display: flex;
-}
-textarea{
-    max-width: 80%;
-    min-width: 80%;
-    max-height: 200px;
-    min-height: 200px;
-    margin-left: 10%;
-}
-label{
-    display: flex;
-    font-weight: bold;
-    margin-left: 10%;
-    margin-bottom: 10PX;
 }
 .container-flex-R button{
     background-color: #0e2d71d5;

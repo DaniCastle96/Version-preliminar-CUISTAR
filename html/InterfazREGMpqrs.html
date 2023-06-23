@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/StyleREGMPQRS.css">
+  <link rel="shortcut icon" href="../img/iconomascotas.png"type="image/x-icon">
+  <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <title>Registrar Mascota</title>
+</head>
+<body>
+  
+  <section class="form-admin">
+    <div style="display: flex; align-items: center; margin-left: 50px; margin-top: 10px; margin-bottom: 20px;">
+      <img src="../img/iconomascotas.png" alt="logo" width="60" style="vertical-align: middle; margin-right: 10px;"/>
+      <h4 class="titulorespuesta" style="margin: 0;">Registrar Mascota</h4>
+    </div>
+    
+    
+    
+   
+
+    <form action="../php/resgistrarmascotapqrs.php" method="POST">
+    <input class="controls" type="text" required name="nombre" placeholder="Nombre Mascota">
+    <form>
+      
+      <select name="categoria" aria-required="true">
+        <option disabled selected>Categoria</option>
+        <option value="Perro">Perro</option>
+        <option value="Gato">Gato</option>
+      </select>
+      <select name="genero" aria-required="true">
+        <option disabled selected>Genero</option>
+        <option value="MACHO">Macho</option>
+        <option value="HEMBRA">Hembra</option>
+      </select>
+   <input class="controls" type="text" required name="raza" placeholder="Raza">
+ 
+   <select name="edad" required>
+    <option disabled selected>Edad</option>
+    <option value="1">Menos de 1 año</option>
+    <option value="2">1 - 2 años</option>
+    <option value="3">3 - 5 años</option>
+    <option value="4">Más de 5 años</option>
+  </select>
+  <select name="peso" required>
+    <option disabled selected>Peso</option>
+    <option value="0-5">Menos de 5 kg</option>
+    <option value="5-10">5 - 10 kg</option>
+    <option value="10-20">10 - 20 kg</option>
+    <option value="20+">Más de 20 kg</option>
+  </select>
+  <select name="estatura" required>
+    <option disabled selected>Estatura</option>
+    <option value="menor-a-30">Menor a 30 cm</option>
+    <option value="30-60">30 - 60 cm</option>
+    <option value="60-90">60 - 90 cm</option>
+    <option value="mayor-a-90">Mayor a 90 cm</option>
+  </select>
+<input class="controls" type="email" required name="correo" placeholder="Correo" required="">
+    
+<input class="botons"  type="submit" value="Registrar">
+  </form>
+    <a href="../html/InterfazLISTAMASCOTAS.php"> <input class="botons"  type="reset" value="Volver"></a>
+   
+
+    
+  </section>
+
+
+</body>
+</html>

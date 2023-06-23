@@ -53,7 +53,8 @@ body{
 /*<----------------Fin--Header-------->*/
 /*<----------------Consultar--Estado-------->*/
 .container-flex{
-    background-color: #F9F2D7;
+    background-color: #FDE9CD;
+    border-radius: 5px;
     display: flex;
     flex-flow: row wrap;
     width: 70%;
@@ -66,6 +67,34 @@ body{
     order: 1;
     flex-grow: 8;  
 }
+.caja2-2 form{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 90%;
+}
+.caja2-2 label{
+    margin-left: 10%;
+    margin-top: 10px; 
+    font-weight: bold;
+}
+.caja2-2 input{
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-top: 10px;
+    height: 35px;
+}
+
+.caja2-2 button{
+    margin-top: 10px;
+    margin-left: 10%;
+    height: 35px;
+    background-color: #0e2d71d5;
+    color: white;
+    border-color: rgb(48, 48, 48);
+}
+
+
 .caja3-3{
     height: 530px;
     width: 20%;
@@ -103,27 +132,13 @@ body{
 }
 .tabla thead{
     text-transform: unset;
-    background: #373B44;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4286f4, #373B44);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4286f4, #373B44); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #0e2d71d5;
     color: white;
 }
 .tabla tbody{
     background: #ECE9E6;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.tabla tbody tr:hover{
-    background: #FFEFBA;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-.tabla tbody td:hover{
-    background: #ee9ca7;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 .tabla img{

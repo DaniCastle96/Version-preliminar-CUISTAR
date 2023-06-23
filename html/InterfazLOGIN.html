@@ -5,30 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../css/StyleLOGIN.css">
+  <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
   <title>Login</title>
 </head>
 <body> 
+
+  <form action="../php/validar.php" method="POST">
   <div class="container">
-
   <section class="form-register">
-    <h4>Iniciar Sesion</h4>
-    <input class="controls" type="text"  name="nombres" id="nombres" placeholder="Usuario" required>
-    <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña" required>
-
-    <p>Estoy de acuerdo con <a href="#">Terminos y Condiciones</a></p>
-  <a href="../Inicio.html"> <input class="botons"  type="submit" value="Iniciar"></a>
-    <p><a href="../html/InterfazREGISTRO.html">NO TENGO CUENTA</a></p>
-  </section>
-
-  <section class="form-register">
-    <h4>Inicio Sesion Administrativo</h4>
-    <input class="controls" type="text" required name="nombres" id="nombres" placeholder="Usuario">
-    <input class="controls" type="password" name="correo" id="correo" placeholder="Contraseña" required>
     
-    <a href="../html/indexADMIN.html"> <input class="botons"  type="submit" value="Iniciar"></a>
-    <p>Si eres administrador y no cuentas con cuenta, ponte en contacto con tu supervisor</p>
-    <p></a></p>
+
+    <h4><img src="../img/iconomascotas.png" alt="logo" width="40" style="vertical-align: middle; margin-right: 10px;"/> Iniciar Sesión</h4>
+
+    <input class="controls" type="text"  name="correo" placeholder="correo" required>
+    <input class="controls" type="password" name="contraseña" placeholder="Contraseña" required>
+
+  <input class="botons"  type="submit" value="Iniciar"></a>
+  <p>¿No Tienes Cuenta?</a>
+    <a href="../html/InterfazREGISTRO.html">Crear Cuenta</a></p>
   </section>
+</form>
+
   
 </div>
 </body>

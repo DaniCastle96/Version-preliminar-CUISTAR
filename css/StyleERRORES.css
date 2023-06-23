@@ -1,0 +1,82 @@
+body{
+    background-color: #EF858F;
+    margin: 0;
+    padding: 0;
+}
+/*----------------------ERROR--404--500--------------------------*/
+.D404{
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 4%;
+}
+.title404{
+    margin: 10px;
+    width: 60%;
+}
+.titlecuistar{
+    height: 200px;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.h2404{
+    font-size: 50px;
+    width: 80%;
+    margin-left: 10%;
+}
+.p404{
+    font-size: 30px;
+    width: 80%;
+    margin-left: 10%;
+}
+.nav404{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin-left: 10%;
+    
+}
+.nav404 a{
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.icon404 {
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 30px;
+    width: 30px;
+}
+.img404 {
+    width: 40%;
+    height: auto;
+}
+.gatoimg{
+    height: 800px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 50%;
+    border: #E8505C 10px solid;
+}
+@media(max-width: 800px){
+    .D404{
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+    }
+    .titlecuistar{
+       width: 350px;
+    }
+    .h2404{
+        width: 300px;
+    }
+    .gatoimg{
+        width: 400px;
+    }
+    .p404{
+        width: 300px; 
+    }
+}
+/*-----------------FIN---ERROR--404--500--------------------------*/

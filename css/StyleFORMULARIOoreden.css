@@ -1,0 +1,102 @@
+body {
+    background-color: #F5BAC3;
+    margin: 0;
+    padding: 0;
+  }
+/*--------------------Header-OV-----------------------------------*/
+.container-flex1{
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #F9F2D7;
+      
+}
+.caja1{
+    display: flex;
+    order: 1;
+    flex-grow: 1;
+    padding: 2px;
+}
+.caja1 img{
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.caja1 h2{
+    font-size: 30px;
+}
+.caja3{
+    display: flex;
+    justify-content: flex-end;
+    order: 3;
+    flex-grow: 3;
+    margin: auto;
+}
+.caja3 a{
+    font-size: 25px;
+    text-decoration: none;
+    padding: 5px;
+    color: black;
+    font-weight: 500;
+    margin-right: 10px;
+}
+.caja3 nav{
+    display: flex;
+    justify-content: last baseline;
+    margin-right: 10px;
+}
+@media(max-width:500px){
+    .caja3 nav{
+    display: block;
+    text-align: center;
+    margin: 10px;
+    }
+}
+/*-----------------Fin---Header-OV--------------------------------*/
+/*-----------------formulario-roden-de-venta--------------------------------*/
+  
+  .container {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #FDE9CD;
+  }
+  .form-group label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="number"] {
+    margin-bottom: 5px;
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
+  
+  .form-group select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+  }
+  
+  .form-group .total {
+    font-weight: bold;
+  }
+  
+  .form-group input[type="submit"] {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  /*-------------Fin----formulario-roden-de-venta--------------------------------*/

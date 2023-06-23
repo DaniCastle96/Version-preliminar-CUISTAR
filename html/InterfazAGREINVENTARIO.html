@@ -4,71 +4,66 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../css/StyleINVENTARIO.css">
+  <link rel="stylesheet" href="../css/StyleINVENTARIO.css?1.0">
+  <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
   
   <title>Agregar Producto</title>
 </head>
 <body>
-  
+  <div class="edit">
   <section class="form-admin">
-    <h4>Agregar nuevo producto</h4>
-    <p>Rellena todos los campos</p>
+    <img src="../img/iconomascotas.png" alt="logo" width="90" style="display: block; margin: 0 auto 10px;"/>
+    <h1 style="text-align: center;">Agregar Producto</h1> <br><br>
 
-    <input class="controls" type="text" required name="nombres" id="ID" placeholder="ID Producto">
-    <form>
-      <select>
+    <form action="../php/agregarinventario.php" method="POST">
+      <input class="controls" type="date" placeholder="FECHA DE INSCRIPCION" name="fecha" required>
+
+      <select name="categoria" required>
         <option disabled selected="">Categoria</option>
-        <option value="">Perro</option>
-        <option value="">Gato</option>
+        <option value="Perros">Perros</option>
+        <option value="Gatos">Gatos</option>
       </select>
-    </form>
-    
-    <form>
-      <select>
+
+      <select name="tipoProducto" required>
         <option disabled selected="">Tipo de producto</option>
-        <option value="">Comida para gatos</option>
-        <option value="">Comida para perros</option>
-        <option value="">Juegetes</option>
-        <option value="">Medicamentos</option>
-        <option value="">Accesorio</option>
-        <option value="">Ropa</option>
+        <option value="Comida para gatos">Comida para gatos</option>
+        <option value="Comida para perros">Comida para perros</option>
+        <option value="Juegetes">Juegetes</option>
+        <option value="Medicamentos">Medicamentos</option>
+        <option value="Accesorio">Accesorio</option>
+        <option value="Ropa">Ropa</option>
       </select>
-    </form>
-    <input class="controls" type="text" name="correo" id="Nombre" placeholder="Nombre Producto" required>
+
+      <input class="controls" type="text" name="nombreProducto" placeholder="Nombre Producto" required>
    
-    <input class="controls" type="text" name="correo" id="Caracteristica" placeholder="Descripcion Producto" required>
-    <form>
-      <select>
-        <option disabled selected="">Unidad de medida</option>
-        <option value="">KL</option>
-        <option value="">Lb</option>
-        <option value="">No aplica</option>
-      </select>
-      <input class="controls" type="text" name="correo" id="Precio" placeholder="Precio" required>
-    </form>
-    <input class="controls" type="text" name="correo" id="Cantidad" placeholder="Cantidad De Productos" required>
-  
-    
+      <input class="controls" type="text" name="descripcionProducto" placeholder="Descripcion Producto" required>
 
-
-    <form>
-      <select>
+      <select name="talla" required>
         <option disabled selected="">Talla</option>
-        <option value="">XS</option>
-        <option value="">S</option>
-        <option value="">M</option>
-        <option value="">L</option>
-        <option value="">XL</option>
-        <option value="">No aplica</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="No aplica">No aplica</option>
       </select>
-    </form>
-   
 
-    <a href="InterfazPROAGREGADOINVE.html"> <input class="botons"  type="submit" value="Añadir"></a>
-   
-    <a href="InterfazINVENTARIO.html"> <input class="botons"  type="reset" value="Cancelar"></a>
+      <select name="unidadMedida" required>
+        <option disabled selected="">Unidad de medida</option>
+        <option value="KL">KL</option>
+        <option value="Lb">Lb</option>
+        <option value="No aplica">No aplica</option>
+      </select>
+
+      <input class="controls" type="text" name="precio" placeholder="Precio" required>
     
-  </section>
+      <input class="controls" type="text" name="cantidadActual" placeholder="Cantidad De Productos" required>
 
+      <input class="botons" type="submit" value="Añadir">
+    
+    </form>
+      <a href="InterfazINVENTARIO.php"><input class="botons" type="reset" value="Cancelar"></a>
+  </section>
+</div>
 </body>
 </html>

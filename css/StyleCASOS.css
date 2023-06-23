@@ -1,0 +1,58 @@
+body{
+ background-color: #F5BAC3;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+height: 90px;
+margin-left: 20px;
+margin-bottom: 10px;
+margin-right: 10px;
+margin-top: 10px;
+}
+header {
+    
+    background-color: #F9F2D7;
+    min-height: 70px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+h1 {
+font-size: 2.3em;
+    
+    text-align: center;
+    margin-top: 140px; 
+  }
+
+  
+  div.galeria {
+  
+    margin: 70px 10px;
+    box-shadow: 0 2px 2px 0;
+    float: left;
+    width: 350px;
+    border-radius: 10px; 
+    margin-top: 30px;
+  }
+  
+  
+  div.galeria img {
+    
+    width: 100%;
+    height: 380px; /* altura fija para las imágenes */
+    object-fit: cover; /* Escala la imagen para que llene la caja y no se deforme deformarse */
+    border-radius: 10px; /
+  }
+  
+  div.pie {
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(224, 224, 164);
+    font-size: 1.3em;
+  }
