@@ -2,7 +2,7 @@
 include_once("conexion.php");
 
 $idProducto = $_GET["id"];
-$inventario = "SELECT * FROM inventario WHERE ID_producto = '$idProducto'";
+$inventario = "SELECT * FROM productos WHERE id = '$idProducto'";
 $resultado = mysqli_query($conexion, $inventario);
 ?>
 
@@ -23,67 +23,29 @@ $resultado = mysqli_query($conexion, $inventario);
   <h1 style="text-align: center;">Actualizar Producto</h1> <br><br>
     
     <?php while ($row = mysqli_fetch_assoc($resultado)) { ?>
-    <form class="container" action="actualizarinventario.php" method="POST">
+    <form class="container" action="actualizarinventario.php" enctype="multipart/form-data" method="POST">
     
       
-      <label for="fecha">Fecha:</label>
-      <input type="date" name="fecha" id="fecha"  value="<?php echo $row['Fecha'] ?? ''; ?>">
+      
+      <input type="hidden" name="id" id="fecha"  value="<?php echo $row['id'] ?? ''; ?>" readonly >
 
-      
-      <label for="categoria">Categoría:</label>
-      <select name="categoria" >
-        <option disabled selected value="">Categoría</option>
-        <option value="Perro" <?php echo $row['Categoria'] == 'Perro' ? 'selected' : ''; ?>>Perro</option>
-        <option value="Gato" <?php echo $row['Categoria'] == 'Gato' ? 'selected' : ''; ?>>Gato</option>
-      </select>
-      
-      <label for="tipoProducto">Tipo de Producto:</label>
-      <select name="tipoProducto" >
-        <option disabled selected value="">Tipo de producto</option>
-        <option value="ComidaGato" <?php echo $row['Tipo_de_producto'] == 'ComidaGato' ? 'selected' : ''; ?>>Comida para gatos</option>
-        <option value="ComidaPerro" <?php echo $row['Tipo_de_producto'] == 'ComidaPerro' ? 'selected' : ''; ?>>Comida para perros</option>
-        <option value="Juguetes" <?php echo $row['Tipo_de_producto'] == 'Juguetes' ? 'selected' : ''; ?>>Juguetes</option>
-        <option value="Medicamentos" <?php echo $row['Tipo_de_producto'] == 'Medicamentos' ? 'selected' : ''; ?>>Medicamentos</option>
-        <option value="Accesorio" <?php echo $row['Tipo_de_producto'] == 'Accesorio' ? 'selected' : ''; ?>>Accesorio</option>
-        <option value="Ropa" <?php echo $row['Tipo_de_producto'] == 'Ropa' ? 'selected' : ''; ?>>Ropa</option>
-      </select>
-      
-      <label for="nombreProducto">Nombre del Producto:</label>
-      <input type="text" name="nombreProducto" value="<?php echo $row['Nombre_producto'] ?? ''; ?>">
-      
-      <label for="descripcionProducto">Descripción del Producto:</label>
-      <textarea name="descripcionProducto" rows="5"><?php echo $row['Descripcion_de_producto']; ?></textarea>
-      <label for="talla">Talla:</label>
-      <select name="talla">
-        <option disabled selected value="">Talla</option>
-        <option value="S" <?php echo $row['Talla'] == 'S' ? 'selected' : ''; ?>>S</option>
-        <option value="M" <?php echo $row['Talla'] == 'M' ? 'selected' : ''; ?>>M</option>
-        <option value="L" <?php echo $row['Talla'] == 'L' ? 'selected' : ''; ?>>L</option>
-        <option value="NoAplica" <?php echo $row['Talla'] == 'NoAplica' ? 'selected' : ''; ?>>No aplica</option>
-      </select>
-      
-      <label for="unidadMedida">Unidad de Medida:</label>
-      <select name="unidadMedida" >
-        <option disabled selected value="">Unidad de medida</option>
-        <option value="KL" <?php echo $row['unidad_de_medida'] == 'KL' ? 'selected' : ''; ?>>KL</option>
-        <option value="Lb" <?php echo $row['unidad_de_medida'] == 'Lb' ? 'selected' : ''; ?>>Lb</option>
-        <option value="NoAplica" <?php echo $row['unidad_de_medida'] == 'NoAplica' ? 'selected' : ''; ?>>No aplica</option>
-      </select>
+      <label for="Nombre">Nombre Producto:</label>
+      <input type="text" name="nombre_producto" id="fecha"  value="<?php echo $row['nombre_producto'] ?? ''; ?>" >
+      <label for="Descripcion">Descripcion:</label>
+      <input type="text" name="descripcion" id="fecha"  value="<?php echo $row['descripcion'] ?? ''; ?>" >
       
       <label for="precio">Precio:</label>
-      <input type="number" name="precio" id="precio"  value="<?php echo $row['Precio'] ?? ''; ?>">
-      
-      <label for="cantidadActual">Cantidad Actual:</label>
-      <input type="number" name="cantidadActual" id="cantidadActual"  value="<?php echo $row['cantidad_actual'] ?? ''; ?>">
-      
-      <label for="entrada">Entrada:</label>
-      <input type="number" name="entrada" id="entrada"  value="<?php echo $row['Entrada'] ?? ''; ?>">
-      <input type="hidden" id="idProducto"  value="<?php echo $idProducto;?>"name="idProducto">
-      
+      <input type="text" name="precio" id="fecha"  value="<?php echo $row['precio'] ?? ''; ?>" >
+      <label for="imagen">Nombre Imagen:</label>
+      <input type="file" name="imagen" id="fecha"  value="<?php echo $row['imagen'] ?? ''; ?>" >
     <?php } ?>
-    
+
+    <label for="fecha">Fecha:</label>
+      <input type="date" name="fecha" id="fecha"  value="<?php echo $row['fecha'] ?? ''; ?>" >
     <input class="botons" value="ACTUALIZAR" type="submit">
     </form>
+    
+
     
     <a href="../html/InterfazINVENTARIO.php?id_proveedor=<?php echo $idProducto; ?>"><input class="botons" type="reset" value="Cancelar"></a>
   </section>

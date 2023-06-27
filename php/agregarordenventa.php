@@ -12,7 +12,7 @@ $precio = $_POST['precio'];
 $cantidad = $_POST['cantidad'];
 $pago = $_POST['tipo_pago'];
 
-$conexion->select_db("cuistar");
+
 $sql = "INSERT INTO ordenes (id, fecha, cliente, direccion, correo, celular, producto, precio, cantidad, tipo_pago) VALUES ('$id', '$fecha', '$cliente', '$direccion', '$correo', '$celular', '$producto', '$precio', '$cantidad', '$pago')";
 
 if ($conexion->query($sql) === TRUE) {

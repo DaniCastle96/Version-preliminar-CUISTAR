@@ -1,14 +1,15 @@
 body {
     font-family: 'Times New Roman', Times, serif;
     padding: 0;
-    background-color: #E8D4D1;
+    background-color: #F5BAC3;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     box-sizing: border-box;
     flex-direction: column;
-
+    margin: 0;
+    padding: 0;
 }   
 
 /* HEADER */
@@ -76,6 +77,8 @@ table {
     margin: auto;
     padding: auto;
     width: 100%; 
+    border-collapse: collapse;
+    
     
 }
 
@@ -111,12 +114,21 @@ table {
  th, td {
             border: 1px solid rgba(0, 0, 0, 0.298);
             padding: 5px;
-            background-color: rgba(248, 251, 251, 0.132);
+            border: black 1px solid;
         }
-.superior {
-    background-color: #f9f2d7;
-    
+tbody{
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
+thead{
+    text-transform: unset;
+    background-color: #0e2d71d5;
+    color: white;
+
+}
+
 
 .buscar {
     background-color: #F9F2D7;

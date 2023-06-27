@@ -10,7 +10,7 @@ $producto = $_POST["producto"];
 $correo  = $_POST["correo"];
 $fecha = $_POST["fecha"];
 
-$conexion->select_db("cuistar");
+
 $sql = "INSERT INTO lista_proveedores( nombre, direccion, fijo, celular, ciudad, producto, correo, fecha) VALUES ('$nombre', '$direccion','$fijo', '$celular','$ciudad', '$producto', '$correo', '$fecha')";
 
 if($conexion->query($sql)===TRUE){

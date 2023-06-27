@@ -32,7 +32,7 @@ $conexion->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas</title>
-    <link rel="stylesheet" href="../css/StyleVentas.css">
+    <link rel="stylesheet" href="../css/StyleVentas.css?1.0">
     <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -51,16 +51,20 @@ $conexion->close();
             </form>
         </div>
         <div class="menu">
-            <a href="../php/reporteventa.php">Descargar reporte </a>
-        </div>
-        <div class="menu">
-            <a href="InterfazORDENES.php">Ordenes de venta </a>
-        </div>
+                <nav>
+                    <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
+                    <a href="InterfazORDENES.php"><button type="submit" >Ordenes de Ventas</button></a>
+                    <a href="indexADMIN.HTML"><button type="submit" >VOLVER</button></a>
+                </nav>
+            </div>
     </header>
-
+    <div class="container">
+    <div class="ventas">
+        <h1>Ventas </h1></div>
     <table class="syled-table">
         <thead>
             <tr>
+                
                 <th>Id</th>
                 <th>nombre_cliente</th>
                 <th>direccion</th>
@@ -103,5 +107,7 @@ $conexion->close();
             <?php } ?>
        
     </table>
+</div>
 </body>
+
 </html>

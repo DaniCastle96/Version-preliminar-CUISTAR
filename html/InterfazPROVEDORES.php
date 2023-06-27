@@ -30,8 +30,8 @@ if (isset($_GET["eliminar"])) {
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/StylesPROVEDORES.css?1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.1">
+    <link rel="stylesheet" href="../css/StylesPROVEDORES.css?1.1">
     <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
     <title>PROVEEDORES</title>
 </head>

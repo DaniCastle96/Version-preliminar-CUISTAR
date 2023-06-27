@@ -10,14 +10,14 @@ $peso = $_POST["peso"];
 $estatura  = $_POST["estatura"];
 $correo = $_POST["correo"];
 
-$conexion->select_db("cuistar");
+
 $sql = "INSERT INTO mascotas( nombre, categoria, raza, genero, edad, peso, estatura, correo) VALUES ('$nombre', '$categoria','$raza', '$genero','$edad', '$peso', '$estatura', '$correo')";
 
 if($conexion->query($sql)===TRUE){
     echo"\n Datos ingresados";
     header("Location: ../html/InterfazLISTAMASCOTAS.php");
 }else{
-    echo"No se ingresaron los datos".$conn->error;
+    echo"No se ingresaron los datos".$conexion->error;
 }
 
 ?> 

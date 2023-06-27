@@ -19,10 +19,11 @@ $resultado = mysqli_query($conexion, $productos);
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CUISTAR</title>
-  <link rel="stylesheet" href=".//css/StyleINDEX.css">
-  <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
+  <link rel="stylesheet" href=".//css/StyleINDEX.css?1.0">
+  <!----Anexos----->
+  <link rel="shortcut icon" href="img/iconomascotas.png"type="image/x-icon">
   <script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+  <title>CUISTAR</title>
 </head>
 <body>
   <!--------------------------------Encabezado---------------------------------------------------->
@@ -161,7 +162,7 @@ $resultado = mysqli_query($conexion, $productos);
     <div class="grupo-1">
         <div class="box">
             <figure>
-                <a href="Inicio.html">
+                <a href="Inicio.php">
                     <img src="imG/iconomascotas.png" alt="Logo CUISTAR">
                 </a>
             </figure>

@@ -13,7 +13,7 @@ include_once('conexion.php');
     $pago = $_POST['tipo_pago'];
     $precio = $_POST['precio'];
    
-    $conexion->select_db("cuistar");
+   
     $sql = "INSERT INTO ventas (nombre_cliente,direccion,celular,correo, cantidad, fecha, nombre_producto, descripcion,tipo_pago,precio) VALUES ('$cliente', '$direccion','$celular', '$correo','$cantidad', '$fecha', '$producto', '$descripcion','$pago','$precio')";
     
     if($conexion->query($sql)===TRUE){

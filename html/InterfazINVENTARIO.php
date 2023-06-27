@@ -3,19 +3,18 @@ include_once("../php/conexion.php");
 
 if (isset($_POST["enviar"])) {
     $busqueda = $_POST["busqueda"];
-    $datos = "SELECT * FROM inventario WHERE ID_producto LIKE '%$busqueda%'";
+    $datos = "SELECT * FROM productos WHERE id LIKE '%$busqueda%'";
 } else {
-    $datos = "SELECT * FROM inventario";
+    $datos = "SELECT * FROM productos";
 }
 $resultado = mysqli_query($conexion, $datos);
 
 if (isset($_GET["eliminar"])) {
     $idEliminar = $_GET["eliminar"];
 
-    $eliminar = "DELETE FROM inventario WHERE ID_producto = '$idEliminar'";
+    $eliminar = "DELETE FROM productos WHERE id = '$idEliminar'";
     if(mysqli_query($conexion, $eliminar)){
-        header("Location: ../html/InterfazINVENTARIO.php");
-        exit();
+      
     } else {
         echo "Error al eliminar el producto: " . mysqli_error($conexion);
     }
@@ -29,10 +28,9 @@ if (isset($_GET["eliminar"])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inventario</title>
-    <link rel="stylesheet" href="../css/StyleINVENTARIO.css?1.0">
+    <link rel="stylesheet" href="../css/StyleINVENTARIO.css?1.2">
     <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 
 <body>
@@ -46,65 +44,60 @@ if (isset($_GET["eliminar"])) {
                 <input placeholder="Buscar Producto" type="text" name="busqueda">
                 <input class="botons" type="submit" name="enviar" value="Buscar">
             </form>
-           
         </div>
         <div class="menu">
-            <a href="../php/reporteinventario.php">Descargar reporte</a>
+            <nav>
+                <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
+                <a href="indexADMIN.HTML"><button type="submit" >VOLVER</button></a>
+            </nav>
         </div>
-        <div class="menu">
-                <nav>
-                    <a href="indexADMIN.HTML">VOLVER</a>
-                   </nav></div>
-        
-        
     </header>
 
     <div class="registro">
-        <a href="InterfazAGREINVENTARIO.html">Nuevo</a>
+        <a href="InterfazAGREINVENTARIO.html"><button type="submit">Nuevo</button></a>
     </div>
+    <div class="conta">
+        <div class="inventario">
+            <h1>Inventario</h1>
+        </div>
 
-    <table class="syled-table">
-        <thead>
-            <tr>
-         <tr>
-                <th>fecha</th>
-                <th>ID de producto</th>
-                <th>categoria</th>
-                <th>tipo de producto</th>
-                <th>nombre de producto</th>
-                <th>descripcion de producto</th>
-                <th>talla</th>
-                <th>unidad de medida</th>
-                <th>precio</th>
-                <th>cantidad actual</th>
-                <th>entrada</th>
-                
-                <th>Acciones</th>
-            </tr>
-            </tr>
-        </thead>
-        <tbody>
-            <?php while ($row = mysqli_fetch_assoc($resultado)) { ?>
+        <table class="syled-table">
+            <thead>
                 <tr>
-                    <td><?php echo $row['Fecha']; ?></td>
-                    <td><?php echo $row['ID_producto']; ?></td>
-                    <td><?php echo $row['Categoria']; ?></td>
-                    <td><?php echo $row['Tipo_de_producto']; ?></td>
-                    <td><?php echo $row['Nombre_producto']; ?></td>
-                    <td><?php echo $row['Descripcion_de_producto']; ?></td>
-                    <td><?php echo $row['Talla']; ?></td>
-                    <td><?php echo $row['unidad_de_medida']; ?></td>
-                    <td><?php echo $row['Precio']; ?></td>
-                    <td><?php echo $row['cantidad_actual']; ?></td>
-                    <td><?php echo $row['Entrada']; ?></td>
-                    
-                    <td>
-                        <div class='editar'><a href='../php/formactualizarinventario.php?id=<?php echo $row['ID_producto']; ?>'><ion-icon name='create-outline'></ion-icon></a></div>
-                        <div class='eliminar'><a href='../php/elimarinventario.php?id=<?php echo $row['ID_producto']; ?>'><ion-icon name='trash-outline'></ion-icon></a></div>
-                    </td>
+                    <th>Id Producto</th>
+                    <th>Nombre Producto</th>
+                    <th>Descripcion</th>
+                    <th>Precio</th>
+                    <th>Nombre Imagen</th>
+                    <th>Fecha</th>
+                    <th>Acciones</th>
                 </tr>
-            <?php } ?>
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+                <?php while ($row = mysqli_fetch_assoc($resultado)) { ?>
+                    <tr>
+                        <td><?php echo $row['id']; ?></td>
+                        <td><?php echo $row['nombre_producto']; ?></td>
+                        <td><?php echo $row['descripcion']; ?></td>
+                        <td><?php echo $row['precio']; ?></td>
+                        <td><?php echo $row['imagen']; ?></td>
+                        <td><?php echo $row['fecha']; ?></td>
+                        <td>
+                            <div class='editar'>
+                                <a href='../php/formactualizarinventario.php?id=<?php echo $row['id']; ?>'>
+                                    <ion-icon name='create-outline'></ion-icon>
+                                </a>
+                            </div>
+                            <div class='eliminar'>
+                                <a href='InterfazINVENTARIO.php?eliminar=<?php echo $row['id']; ?>' ">
+                                    <ion-icon name='trash-outline'></ion-icon>
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
 </body>
 </html>

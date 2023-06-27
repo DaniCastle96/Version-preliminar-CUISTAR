@@ -165,7 +165,6 @@
         <div class="container-flex3">
             <h2>&copy; 2023 <b>CUISTAR</b> - Todos los Derechos Reservados.</h2>
             <h4 class="T-F">Info: CuistarAdmin@hotmail.com</h4>
-            <h4 class="T-F">Soporte: CuistarSoporte@hotmail.com</h4>
         </div>
     </footer>
 </body>

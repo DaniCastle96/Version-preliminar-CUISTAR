@@ -7,7 +7,7 @@ $apellido= $_POST["apellido"];
 $contraseña= $_POST["contraseña"];
 $correo= $_POST["correo"];
 
-$conexion->select_db("cuistar");
+
 $sql = "INSERT INTO usuarios(id_cargo, nombre, apellido, contraseña, correo) VALUES ('$cargo','$nombre', '$apellido','$contraseña', '$correo')";
 
 if($conexion->query($sql)===TRUE){

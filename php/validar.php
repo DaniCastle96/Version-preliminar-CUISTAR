@@ -15,7 +15,7 @@ if($filas['id_cargo']==1){ //administrador
 
 }else
 if($filas['id_cargo']==2){ //cliente
-    header("location:../Inicio.html");
+    header("location:../Inicio.php");
 }
 else{
     ?>

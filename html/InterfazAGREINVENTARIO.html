@@ -15,52 +15,31 @@
     <img src="../img/iconomascotas.png" alt="logo" width="90" style="display: block; margin: 0 auto 10px;"/>
     <h1 style="text-align: center;">Agregar Producto</h1> <br><br>
 
-    <form action="../php/agregarinventario.php" method="POST">
-      <input class="controls" type="date" placeholder="FECHA DE INSCRIPCION" name="fecha" required>
+    <form action="../php/agregarinventario.php" enctype="multipart/form-data" method="POST" >
+      
+    
+      
+      
+        <input type="hidden" name="id" id="fecha"  value="<?php echo $row['id'] ?? ''; ?>" readonly >
+  
+        <label for="Nombre">Nombre Producto:</label>
+        <input type="text" name="nombre_producto" id="fecha"  >
+        <label for="Descripcion">Descripcion:</label>
+        <input type="text" name="descripcion" id="fecha" >
+        
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" id="fecha"  >
+        
+         <label for="fecha">Fecha:</label>
+        <input type="date" name="fecha" id="fecha" >
+        <label for="fecha">Ingrese Imagen del Producto:</label>
+        <input type="file" name="imagen" >
 
-      <select name="categoria" required>
-        <option disabled selected="">Categoria</option>
-        <option value="Perros">Perros</option>
-        <option value="Gatos">Gatos</option>
-      </select>
-
-      <select name="tipoProducto" required>
-        <option disabled selected="">Tipo de producto</option>
-        <option value="Comida para gatos">Comida para gatos</option>
-        <option value="Comida para perros">Comida para perros</option>
-        <option value="Juegetes">Juegetes</option>
-        <option value="Medicamentos">Medicamentos</option>
-        <option value="Accesorio">Accesorio</option>
-        <option value="Ropa">Ropa</option>
-      </select>
-
-      <input class="controls" type="text" name="nombreProducto" placeholder="Nombre Producto" required>
+      <?php } ?>
    
-      <input class="controls" type="text" name="descripcionProducto" placeholder="Descripcion Producto" required>
-
-      <select name="talla" required>
-        <option disabled selected="">Talla</option>
-        <option value="XS">XS</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="No aplica">No aplica</option>
-      </select>
-
-      <select name="unidadMedida" required>
-        <option disabled selected="">Unidad de medida</option>
-        <option value="KL">KL</option>
-        <option value="Lb">Lb</option>
-        <option value="No aplica">No aplica</option>
-      </select>
-
-      <input class="controls" type="text" name="precio" placeholder="Precio" required>
-    
-      <input class="controls" type="text" name="cantidadActual" placeholder="Cantidad De Productos" required>
-
-      <input class="botons" type="submit" value="Añadir">
-    
+      <input class="botons" value="Agregar" type="submit">
+      </form>
+      
     </form>
       <a href="InterfazINVENTARIO.php"><input class="botons" type="reset" value="Cancelar"></a>
   </section>

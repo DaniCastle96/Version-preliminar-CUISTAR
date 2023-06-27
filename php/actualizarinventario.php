@@ -1,30 +1,62 @@
 <?php
 include_once('conexion.php');
 
-if (isset($_POST['idProducto'])) {
-    $idProducto = $_POST['idProducto'];
+if (isset($_POST['id'])) {
+    $idProducto = $_POST['id'];
 
-  
-    $fecha = $_POST['fecha'];
-    $categoria = $_POST['categoria'];
-    $tipoProducto = $_POST['tipoProducto'];
-    $nombreProducto = $_POST['nombreProducto'];
-    $descripcionProducto = $_POST['descripcionProducto'];
-    $talla = $_POST['talla'];
-    $unidadMedida = $_POST['unidadMedida'];
+    // Validar y sanitizar los datos ingresados por el usuario
+    $nombreProducto = $_POST['nombre_producto'];
+    $descripcionProducto = $_POST['descripcion'];
     $precio = $_POST['precio'];
-    $cantidadActual = $_POST['cantidadActual'];
-    $entrada = $_POST['entrada'];
-    $salida = $_POST['salida'];
+    $fecha = $_POST['fecha'];
 
-    $sql = "UPDATE inventario SET Fecha = '$fecha', Categoria = '$categoria', Tipo_de_producto = '$tipoProducto', Nombre_producto = '$nombreProducto', Descripcion_de_producto = '$descripcionProducto', Talla = '$talla', unidad_de_medida = '$unidadMedida', Precio = '$precio', cantidad_actual = '$cantidadActual', Entrada = '$entrada', Salida = '$salida' WHERE ID_producto = '$idProducto'";
+    // Verificar si se ha enviado el formulario
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Obtener la información del archivo
+        $imagenNombre = $_FILES['imagen']['name'];
+        $imagenTipo = $_FILES['imagen']['type'];
+        $imagenTamaño = $_FILES['imagen']['size'];
+        $imagenTemporal = $_FILES['imagen']['tmp_name'];
 
-    if ($conexion->query($sql) === TRUE) {
-        echo "Producto actualizado exitosamente";
-        header("Location:../html/InterfazINVENTARIO.php");/*para que no se vaya a el Not found*/
-        exit();
+        // Comprobar que se haya seleccionado un archivo
+        if (!empty($imagenNombre)) {
+            // Verificar el tipo de archivo (opcional)
+            if ($imagenTipo == 'image/jpeg' || $imagenTipo == 'image/png') {
+                // Generar un nombre único para la imagen
+                $imagenNombreUnico = uniqid('imagen_') . '.' . pathinfo($imagenNombre, PATHINFO_EXTENSION);
+
+                // Guardar la imagen en una carpeta
+                $carpetaDestino = '../img/';
+                $rutaImagen = $carpetaDestino . $imagenNombreUnico;
+                move_uploaded_file($imagenTemporal, $rutaImagen);
+
+                // Construir la consulta SQL con la cláusula WHERE para actualizar un solo registro
+                $sql = "UPDATE productos SET nombre_producto = '$nombreProducto', descripcion = '$descripcionProducto', precio = '$precio', imagen = '$rutaImagen', fecha = '$fecha' WHERE id = '$idProducto'";
+
+                if ($conexion->query($sql) === TRUE) {
+                    echo "Producto actualizado exitosamente";
+                    header("Location:../html/InterfazINVENTARIO.php");
+                    exit();
+                } else {
+                    echo "Error al actualizar el producto: " . $conexion->error;
+                }
+            } else {
+                echo "El tipo de archivo no es válido. Se permiten solo imágenes JPEG o PNG.";
+            }
+        } else {
+            // Construir la consulta SQL sin la columna de imagen
+            $sql = "UPDATE productos SET nombre_producto = '$nombreProducto', descripcion = '$descripcionProducto', precio = '$precio', fecha = '$fecha' WHERE id = '$idProducto'";
+
+            if ($conexion->query($sql) === TRUE) {
+                echo "Producto actualizado exitosamente";
+                header("Location:../html/InterfazINVENTARIO.php");
+                exit();
+            } else {
+                echo "Error al actualizar el producto: " . $conexion->error;
+            }
+        }
     } else {
-        echo "Error al actualizar el producto: " . $conexion->error;
+        echo "No se envió el formulario.";
     }
 } else {
     echo "No se envió el ID del producto.";

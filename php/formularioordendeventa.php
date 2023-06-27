@@ -24,9 +24,8 @@ $resultado = mysqli_query($conexion, $productos);
             </div>
             <div class="caja3">
                     <nav>
-                        <a href="../Inicio.php">Inicio</a>
-                        <a href="../html/Error404.html">Contacto</a>
-                        <a href="../html/Error404.html">Registro</a>
+                
+                        <a href="../html/InterfazVENTAS.php">Volver</a>
                     </nav>
             </div>
         </div>

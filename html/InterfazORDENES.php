@@ -34,7 +34,7 @@ $conexion->close();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ventas</title>
-    <link rel="stylesheet" href="../css/StyleVentas.css">
+    <link rel="stylesheet" href="../css/StyleVentas.css?1.0">
     
     <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -54,14 +54,13 @@ $conexion->close();
             </form>
         </div>
         <div class="menu">
-            <a href="../php/reporteorden.php">Descargar reporte </a>
-        </div>
-      
-        <div class="menu">
-            <a href="InterfazVENTAS.php">volver </a>
-        </div>
+                <nav>
+                    <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
+                    <a href="InterfazVENTAS.php"><button type="submit" >VOLVER</button></a>
+                </nav>
+            </div>
     </header>
-
+    <div class="ventas"> <h1>Ordenes de Ventas</h1></div>
     <table class="syled-table">
         <thead>
             <tr>
