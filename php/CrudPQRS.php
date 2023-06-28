@@ -22,7 +22,7 @@
             <div class="caja2">
                 <nav>
                     <a href="../html/InterfazLISTAMASCOTAS.php">Mascotas</a>
-                    <a href="../html/indexADMIN.html">Volver</a>
+                    <a href="../html/indexADMIN.php">Volver</a>
                 </nav>
             </div>
         </div>
@@ -43,6 +43,7 @@
                             <th>Tipo</th>
                             <th>Creacion</th>
                             <th>Estado</th>
+                            
                             <th>Atender</th>
                             <th>Archivar</th>
                             <th>Eliminar</th>

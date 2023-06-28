@@ -48,7 +48,7 @@ if (isset($_GET["eliminar"])) {
         <div class="menu">
             <nav>
                 <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
-                <a href="indexADMIN.HTML"><button type="submit" >VOLVER</button></a>
+                <a href="indexADMIN.php"><button type="submit" >VOLVER</button></a>
             </nav>
         </div>
     </header>

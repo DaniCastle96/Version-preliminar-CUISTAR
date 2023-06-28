@@ -8,6 +8,7 @@ while ($row = mysqli_fetch_assoc($resultado)) {
     $nombre = $row['nombre'];
     $apellido = $row['apellido'];
     $correo = $row['correo'];
+    $asunto = $row['asunto'];
 }
 
 ?>
@@ -16,7 +17,7 @@ while ($row = mysqli_fetch_assoc($resultado)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/CrudPQRS.css?1.2">
+    <link rel="stylesheet" href="../css/CrudPQRS.css?1.4">
     <link rel="shortcut icon" href="../img/iconomascotas.png" type="image/x-icon">
     <title>Modificar</title>
 </head>
@@ -32,53 +33,52 @@ while ($row = mysqli_fetch_assoc($resultado)) {
         <br>
     </header>
     <div class="container-flex-R">
-        <div clas="responder">
+        <div class="responder">
         
-        <div style="display: flex; align-items: center; margin-left: 50px; margin-top: 20px;">
-  <img src="../img/iconomascotas.png" alt="logo" width="60" style="margin-right: 10px;"/>
-  <h2 class="titulorespuesta" style="margin: 0;">Modificar Registro</h2>
-</div>
-
-
-
-</div><br><br>
-
-
-            <form action="atender.php" method="POST" clas="formulario">
-                <label for="id">ID:</label>
-                <input type="text" id="id" name="id" value="<?php echo $id; ?>" required readonly>
-                <br>
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required readonly>
-                <br>
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" value="<?php echo $apellido; ?>" required readonly>
-                <br>
-                <label for="correo">Correo Electrónico:</label>
-                <input type="email" id="correo" name="correo" value="<?php echo $correo; ?>" required readonly>
-                <br>
-                <label for="tipo">Estado:</label>
-                <select name="estado" required>
-                    <option disabled selected>Elija una opción...</option>
-                    <option value="En tramite">En trámite</option>
-                    <option value="Tramitado">Tramitado</option>
-                    <option value="En espera">En espera</option>
-                </select>
-                <br>
-                <button class="Enviar" type="submit" value="Modificar" name="modificar">Modificar</button>
-            </form>
+            <div class="titulo-respuesta">
+                
+                <h2 class="titulorespuesta"><img src="../img/iconomascotas.png" alt="logo" width="60" style="margin-right: 10px;"/>Atender</h2>
+            </div>
         </div>
+        <br>
+        <br>
+        <form action="atender.php" method="POST" class="formulario">
+            <label for="id">ID:</label>
+            <input type="text" id="id" name="id" value="<?php echo $id; ?>" required readonly>
+            <br>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" value="<?php echo $nombre; ?>" required readonly>
+            <br>
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" value="<?php echo $apellido; ?>" required readonly>
+            <br>
+            <label for="correo">Correo Electrónico:</label>
+            <input type="email" id="correo" name="correo" value="<?php echo $correo; ?>" required readonly>
+            <br>
+            <label for="asunto">Asunto:</label>
+            <textarea name="asunto" id="asunto" cols="40" rows="10" required readonly><?php echo $asunto ?></textarea>
+            <br>
+            <label for="estado">Estado:</label>
+            <select name="estado" required>
+                <option disabled selected>Elija una opción...</option>
+                <option value="En tramite">En trámite</option>
+                <option value="Tramitado">Tramitado</option>
+                <option value="En espera">En espera</option>
+            </select>
+            <br>
+        <form action="enviar_correo.php" method="POST" class="formulario">
+        <input type="hidden" name="correo_destino" value="<?php echo $correo; ?>">
+        <label for="respuesta">Respuesta:</label>
+        <textarea name="respuesta" id="respuesta" cols="30" rows="10" required></textarea>
+    <br>
+    <button class="Enviar" type="submit" value="Enviar" name="enviar">Enviar respuesta</button>
+</form>
+
     </div>
     <br>
     <!-- Pie de página -->
     <footer>
         <div class="container-flex3">
-            <h2>&copy; 2023 <b>CUISTAR</b> - Todos los Derechos Reservados.</h2>
-            <h4 class="T-F">Info: Cuistar@gmail.com</h4>
-        </div>
-    </footer>
-    <!-- Anexo js -->
-</body>
-</html>
+            <h2>&copy; 2023 <b>CUISTAR</b> - Todos los Derechos
 
-
+            

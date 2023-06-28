@@ -6,9 +6,10 @@ include_once("conexion.php");
     $apellido = $_POST['apellido'];
     $correo = $_POST['correo'];
     $estado = $_POST['estado'];
+    $asunto = $_POST['asunto'];
 
     
-    $atender = "UPDATE solicitudes_archivadas SET nombre = '$nombre', apellido = '$apellido', correo = '$correo', estado = '$estado' WHERE id = '$id'";
+    $atender = "UPDATE solicitudes_archivadas SET nombre = '$nombre', apellido = '$apellido', correo = '$correo', estado = '$estado', asunto = '$asunto' WHERE id = '$id'";
     $resultado = mysqli_query($conexion,$atender);
 
     if($resultado == 1) {
