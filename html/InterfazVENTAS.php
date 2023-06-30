@@ -54,7 +54,7 @@ $conexion->close();
                 <nav>
                     <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
                     <a href="InterfazORDENES.php"><button type="submit" >Ordenes de Ventas</button></a>
-                    <a href="indexADMIN.HTML"><button type="submit" >VOLVER</button></a>
+                    <a href="indexADMIN.php"><button type="submit" >VOLVER</button></a>
                 </nav>
             </div>
     </header>

@@ -44,7 +44,7 @@ if (isset($_GET["eliminar"])) {
             </div>
             <div class="contenedor2">
                 <nav>
-                    <a href="indexADMIN.HTML">VOLVER</a>
+                    <a href="indexADMIN.php">VOLVER</a>
                    
                 </nav>
             </div>

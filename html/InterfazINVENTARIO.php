@@ -48,7 +48,7 @@ if (isset($_GET["eliminar"])) {
         <div class="menu">
             <nav>
                 <a href="../php/reporteinventario.php"><button type="submit">Descargar reporte</button></a>
-                <a href="indexADMIN.HTML"><button type="submit" >VOLVER</button></a>
+                <a href="indexADMIN.php"><button type="submit" >VOLVER</button></a>
             </nav>
         </div>
     </header>
@@ -67,9 +67,15 @@ if (isset($_GET["eliminar"])) {
                     <th>Id Producto</th>
                     <th>Nombre Producto</th>
                     <th>Descripcion</th>
-                    <th>Precio</th>
+                    <th>Entradas</th>
+                    <th>Categoria</th>
+                    <th>Tipo Producto</th>
+                    <th>Talla</th>
+                    <th>Unidad Medida</th>
+                    <th>Precio</th> 
                     <th>Nombre Imagen</th>
                     <th>Fecha</th>
+                   
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -79,6 +85,11 @@ if (isset($_GET["eliminar"])) {
                         <td><?php echo $row['id']; ?></td>
                         <td><?php echo $row['nombre_producto']; ?></td>
                         <td><?php echo $row['descripcion']; ?></td>
+                        <td><?php echo $row['entradas']; ?></td>
+                        <td><?php echo $row['categoria']; ?></td>
+                        <td><?php echo $row['tipo_producto']; ?></td>
+                        <td><?php echo $row['talla']; ?></td>
+                        <td><?php echo $row['unidad_medida']; ?></td>
                         <td><?php echo $row['precio']; ?></td>
                         <td><?php echo $row['imagen']; ?></td>
                         <td><?php echo $row['fecha']; ?></td>

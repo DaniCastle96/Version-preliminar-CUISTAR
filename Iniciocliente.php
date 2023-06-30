@@ -1,3 +1,4 @@
+
 <?php
 include_once("php/conexion.php");
 $productos = "SELECT * FROM productos";
@@ -41,18 +42,26 @@ $resultado = mysqli_query($conexion, $query);
     <input type="submit" name="enviar" value="Buscar">
   </form>
 </div>
-
-
-
     
       <nav>
         <a href="html/InterfasFDN.html" class="nav-link"><img src="img/fidelizacion.png"></a>
-        <a href="inicio.php" class="nav-link"><img src="img/inicio.png"></a>
+       
         <a href="html/Error500.html" class="nav-link"><img src="img/carro-de-la-carretilla.png"></a>
         <a href="./html/caso_de_uso.html" class="nav-link"><img src="img/casos.png"></a>
         <a href="./html/integrantes.html" class="nav-link"><img src="img/presentacion.png"></a>
-        <a href="./html/InterfazLOGIN.html" class="nav-link"><img src="img/usuario.png"></a>
-      
+        
+<?php
+if (isset($_COOKIE) && isset($_COOKIE["cliente"])) {
+  $usuario = $_COOKIE["cliente"];
+  echo '<span>' . $usuario . '</span>';
+} else {
+  echo "La cookie 'cliente' no está definida";
+}
+?>
+
+<form action="php/cerrar_sesion.php" method="post">
+  <button type="submit">Cerrar sesión</button>
+</form>
 
       </nav>
     </a>

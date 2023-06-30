@@ -183,6 +183,16 @@ body{
     width: 80%;
     margin-bottom: 10px;
 }
+.container-flex-R textarea{
+    box-sizing: border-box;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    max-width: 80%;
+    min-width: 80%;
+    max-height: 200px;
+    min-height: 200px;
+
+}
 .container-flex-R select{
     margin-left: 10%;
     width: 80%;

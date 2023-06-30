@@ -22,17 +22,52 @@
       
         <input type="hidden" name="id" id="fecha"  value="<?php echo $row['id'] ?? ''; ?>" readonly >
   
-        <label for="Nombre">Nombre Producto:</label>
-        <input type="text" name="nombre_producto" id="fecha"  >
-        <label for="Descripcion">Descripcion:</label>
-        <input type="text" name="descripcion" id="fecha" >
-        
-        <label for="precio">Precio:</label>
+        <label for="Nombre">Nombre Producto</label>
+        <input type="text" name="nombre_producto"  >
+        <label for="Descripcion">Descripcion</label>
+        <input type="text" name="descripcion" >
+        <label for="Nombre">Entradas</label>
+        <input type="number" name="entradas"  >
+        <label for="Descripcion">Seleccione Categoria</label>
+        <select name="categoria" required>
+          <option disabled selected="">Categoria</option>
+          <option value="Perros">Perro</option>
+          <option value="Gatos">Gatos</option>
+        </select>
+        <label for="tipo">Seleccione Tipo de Producto</label>
+      <select name="tipoProducto" required>
+        <option disabled selected="">Tipo de producto</option>
+        <option value="Comida para gatos">Comida para gatos</option>
+        <option value="Comida para perros">Comida para perros</option>
+        <option value="Juegetes">Juegetes</option>
+        <option value="Medicamentos">Medicamentos</option>
+        <option value="Accesorio">Accesorio</option>
+        <option value="Ropa">Ropa</option>
+      </select>
+      <label for="precio">Seleccione Talla</label>
+      <select name="talla" required>
+        <option disabled selected="">Talla</option>
+        <option value="XS">XS</option>
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL">XL</option>
+        <option value="No aplica">No aplica</option>
+      </select>
+      <label for="precio">Seleccione Unidad medida</label>
+      <select name="unidadMedida" required>
+        <option disabled selected="">Unidad de medida</option>
+        <option value="KL">KL</option>
+        <option value="Lb">Lb</option>
+        <option value="No aplica">No aplica</option>
+      </select>
+
+        <label for="precio">Precio</label>
         <input type="text" name="precio" id="fecha"  >
         
-         <label for="fecha">Fecha:</label>
+         <label for="fecha">Fecha</label>
         <input type="date" name="fecha" id="fecha" >
-        <label for="fecha">Ingrese Imagen del Producto:</label>
+        <label for="fecha">Ingrese Imagen del Producto</label>
         <input type="file" name="imagen" >
 
       <?php } ?>

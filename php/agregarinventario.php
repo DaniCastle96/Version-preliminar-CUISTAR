@@ -4,6 +4,11 @@ var_dump($_FILES['imagen']);
 
 $nombreProducto = $_POST['nombre_producto'];
 $descripcionProducto = $_POST['descripcion'];
+$entradas = $_POST['entradas'];
+$categoria = $_POST['categoria'];
+$tipo_producto = $_POST['tipoProducto'];
+$talla = $_POST['talla'];
+$unidad_medida = $_POST['unidadMedida'];
 $precio = $_POST['precio'];
 $fecha = $_POST['fecha'];
 
@@ -25,11 +30,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       move_uploaded_file($imagenTemporal, $rutaImagen);
 
       // Insertar los datos en la tabla
-      $sql = "INSERT INTO productos (nombre_producto, descripcion, precio, imagen, fecha) VALUES ('$nombreProducto', '$descripcionProducto', '$precio', '$rutaImagen', '$fecha')";
+      $sql = "INSERT INTO productos (nombre_producto, descripcion, entradas, categoria, tipo_producto, talla, unidad_medida, precio, imagen, fecha) VALUES ('$nombreProducto', '$descripcionProducto', '$entradas', '$categoria', '$tipo_producto', '$talla', '$unidad_medida', '$precio', '$rutaImagen', '$fecha')";
 
       if ($conexion->query($sql) === TRUE) {
         echo "Datos ingresados";
-        header("location:../html/InterfazINVENTARIO.php");
+        header("Location: ../html/InterfazINVENTARIO.php");
+        exit;
       } else {
         echo "No se ingresaron los datos: " . $conexion->error;
       }
