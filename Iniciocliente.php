@@ -1,3 +1,15 @@
+<<<<<<< HEAD
+=======
+<style>
+  .container-catalogo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+
+</style>
+>>>>>>> 31e14efe618c6394be112ffa3a81e76e95d20680
 
 <?php
 include_once("php/conexion.php");

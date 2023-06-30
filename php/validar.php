@@ -17,7 +17,11 @@ if ($filas['id_cargo'] == 1) { // administrador
 } else if ($filas['id_cargo'] == 2) { // cliente
     setcookie('cliente', $filas['nombre'] . ' ' . $filas['apellido'], time() + 16 * 20, '/');
 
+<<<<<<< HEAD
     header("location: ../Inicio.php");
+=======
+    header("location: ../Iniciocliente.php");
+>>>>>>> 31e14efe618c6394be112ffa3a81e76e95d20680
     exit;
 } else {
     header("location: ../html/InterfazLOGIN.html");
