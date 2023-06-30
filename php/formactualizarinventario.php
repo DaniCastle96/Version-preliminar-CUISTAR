@@ -29,14 +29,16 @@ $resultado = mysqli_query($conexion, $inventario);
     
 
       
-      <input type="hidden" name="id" id="fecha"  value="<?php echo $row['id'] ?? ''; ?>" readonly >
+      <input type="hidden" name="id"  value="<?php echo $row['id'] ?? ''; ?>" readonly >
 
       <label for="Nombre">Nombre Producto:</label>
-      <input type="text" name="nombre_producto" id="fecha"  value="<?php echo $row['nombre_producto'] ?? ''; ?>" >
+     
+      <input type="text" name="nombre_producto" value="<?php echo $row['nombre_producto'] ?? ''; ?>">
+
       <label for="Descripcion">Descripcion:</label>
-      <input type="text" name="descripcion" id="fecha"  value="<?php echo $row['descripcion'] ?? ''; ?>" >
+      <input type="text" name="descripcion" "  value="<?php echo $row['descripcion'] ?? ''; ?>" >
       <label for="entradas">Entrada:</label>
-      <input type="number" name="entrada" id="entrada"  value="<?php echo $row['entradas'] ?? ''; ?>">
+      <input type="number" name="entradas"   value="<?php echo $row['entradas'] ?? ''; ?>">
 
       <label for="categoria">Categoría:</label>
 <select name="categoria">
@@ -71,16 +73,24 @@ $resultado = mysqli_query($conexion, $inventario);
       </select>
       
       <label for="precio">Precio:</label>
-      <input type="text" name="precio" id="fecha"  value="<?php echo $row['precio'] ?? ''; ?>" >
-      <label for="imagen">Nombre Imagen:</label>
-      <input type="file" name="imagen" id="fecha"  value="<?php echo $row['imagen'] ?? ''; ?>" >
-    <?php } ?>
+      <input type="text" name="precio"  value="<?php echo $row['precio'] ?? ''; ?>" >
+
+              <label for="imagen">Nombre Imagen:</label>
+        <input type="file" name="imagen">
+        <?php if (!empty($row['imagen'])): ?>
+          <span><?php echo $row['imagen']; ?></span>
+        <?php else: ?>
+          <span>Sin archivos seleccionados</span>
+        <?php endif; ?>
+
+
+   
 
     <label for="fecha">Fecha:</label>
-      <input type="date" name="fecha" id="fecha"  value="<?php echo $row['fecha'] ?? ''; ?>" >
+      <input type="date" name="fecha"   value="<?php echo $row['fecha'] ?? ''; ?>" >
     <input class="botons" value="ACTUALIZAR" type="submit">
     </form>
-    
+     <?php } ?>
 
     
     <a href="../html/InterfazINVENTARIO.php?id_proveedor=<?php echo $idProducto; ?>"><input class="botons" type="reset" value="Cancelar"></a>
